@@ -1,7 +1,8 @@
 {
   "projectName": "flow_lib",
   "flowVersion": "v1.0.0",
-  "cVersion": "c++20",
+  "cppVersion": "c++20",
+  "cVersion": "c17",
   "mainFile": "main.cpp",
   "releaseArgs": [
     "-Wall",
@@ -15,10 +16,21 @@
     "-Wall",
     "-Wextra",
     "-Wreturn-type",
-    "-Werror"
+    "-Werror",
+    "-g"
+  ],
+  "libArgs": [
+    "-Wall",
+    "-Wextra",
+    "-Wreturn-type",
+    "-Werror",
+    "-O2",
+    "-flto=auto"
   ],
   "compileArgsMINGW": [],
+  "c_compileArgsMINGW": [],
   "compileArgsGCC": [],
+  "c_compileArgsGCC": [],
   "includePathsMINGW": [
     "/home/flo/Development/stb",
     "/home/flo/Development/fast_float-main/include/fast_float"
@@ -36,5 +48,5 @@
     "-lole32",
     "-luuid"
   ],
-  "linkerArgsGCC": []
+  "linkerArgsGCC": ["-lwayland-client", "-lm"]
 }

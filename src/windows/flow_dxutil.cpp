@@ -3,8 +3,7 @@
 
 namespace flow::win32::util
 {
-    DirectX::XMMATRIX CreateMatrix(const flow::Vector3& position, const flow::Vector3& rotation,
-                                   const flow::Vector3& scale)
+    DirectX::XMMATRIX CreateMatrix(const flow::Vector3& position, const flow::Vector3& rotation, const flow::Vector3& scale)
     {
         auto scaleMatrix = DirectX::XMMatrixScaling(scale.x, scale.y, scale.z);
 
